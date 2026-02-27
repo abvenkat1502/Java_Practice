@@ -311,6 +311,8 @@ public class JavaWorkouts {
 		JavaWorkouts workOuts = new JavaWorkouts();
 		workOuts.task6();
 		workOuts.task7();
+	    }
 	}
+	
+	
 
-}
