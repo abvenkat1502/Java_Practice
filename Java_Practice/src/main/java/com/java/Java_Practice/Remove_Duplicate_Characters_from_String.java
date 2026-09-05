@@ -2,6 +2,7 @@
 
 package com.java.Java_Practice;
 
+import java.text.Collator;
 import java.util.LinkedHashSet;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -43,11 +44,7 @@ public class Remove_Duplicate_Characters_from_String {
 	}
 	
 	public void way3() {
-		String input = "AbCdaBcD";
-		input = input.toUpperCase();
-;		
-		//String res = input.distinct();
-		
+		String input = "ccdd";
         IntStream output = input.chars();
         System.out.println(output);
         
@@ -59,8 +56,7 @@ public class Remove_Duplicate_Characters_from_String {
        
         String c = 	b.collect(Collectors.joining());
 
-        System.out.println("Result : " + c);
-        
+        System.out.println(c);
 	}
 	
 	public static void main(String[] args) {

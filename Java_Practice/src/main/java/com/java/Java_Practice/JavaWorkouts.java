@@ -1,4 +1,4 @@
- package com.java.Java_Practice;
+package com.java.Java_Practice;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 
 public class JavaWorkouts {
 
@@ -88,15 +87,10 @@ public class JavaWorkouts {
 		for (Character character : removeDuplicate) {
 			noDuplicates.append(character);
 		}
-		
 
 		// Get Vowles
 		Map<Character, Integer> vowlesCount = new HashMap<>();
 		Set<Character> vowles = Set.of('A', 'E', 'I', 'O', 'U');
-		
-		//Stream<Character> eg = vowles.stream();
-		//vowles.stream();	
-		//vowles.add("Z");
 
 		for (Character character : greeting.toCharArray()) {
 			if (vowles.contains(character)) {
@@ -315,8 +309,8 @@ public class JavaWorkouts {
 
 	public static void main(String[] args) {
 		JavaWorkouts workOuts = new JavaWorkouts();
-		workOuts.task2();
-		//workOuts.task7();
+		workOuts.task6();
+		workOuts.task7();
 	    }
 	}
 	
