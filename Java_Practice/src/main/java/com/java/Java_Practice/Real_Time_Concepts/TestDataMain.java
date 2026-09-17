@@ -6,32 +6,61 @@ public class TestDataMain {
 	public static void main(String[] args) {
 		
 		UserOperations userOpe = new UserOperations();
-		userOpe.createUsers(2);
-		userOpe.printUsers();
-		String searchMailIs =  userOpe.getUserEmail(0);
-		userOpe.searchEmail(searchMailIs);
-							
+		
+		//Create User
+		userOpe.createUsers(5);
+		//userOpe.printUsers();
+		TestUser user =  userOpe.getUser(0);
+		System.out.println("User is : " + user);
 		
 		/*
-		TestDataGenerator testGen = new TestDataGenerator();
+		//Search user using mail id
+		String searchMailIs =  userOpe.getUserEmail(1);
+		TestUser userIs = userOpe.searchEmail(searchMailIs);
 		
-		List<TestUser> users = new ArrayList<TestUser>();
 		
-		//obj & data insert and print details
-		for (int i = 0; i < 5; i++) {
-			TestUser testUser = new TestUser(testGen.generateFirstName(), 
-					                         testGen.generateLastName(), 
-					                         testGen.generateEmail(), 
-					                         testGen.generateMobileNumber(), 
-					                         testGen.generatePassword()
-					                         );
-			users.add(testUser);
+		//update user details
+		if (userIs != null) {
+			System.out.println("===== Before Update =====");
+			System.out.println("First Name : " + userIs.getFirstName());
+			System.out.println("Last Name : " + userIs.getLastName());
+			System.out.println("Email : " + userIs.getEmail());
+			System.out.println("Password : " + userIs.getPassword());
+			
+			//Updating
+			userOpe.updateUserDetails(userIs, "Litton", "Dash", "litton@test.com", "1234567890", "Litton@123" );
+			
+			System.out.println("===== After Update =====");
+			System.out.println("First Name : " + userIs.getFirstName());
+			System.out.println("Last Name : " + userIs.getLastName());
+			System.out.println("Email : " + userIs.getEmail());
+			System.out.println("Password : " + userIs.getPassword());
+			
+			System.out.println("===== Entire User details =====");
+			userOpe.printUsers();
+		} else {
+			System.out.println("User Not Found");
 		}
 		
-		for(TestUser user : users) {
-			System.out.println(user);
-		}
-		*/
+		
+		//Delete User
+			if (userIs != null) {
+				System.out.println("===== Before Delete =====");
+				userOpe.getUserCount();
+				userOpe.printUsers();
+				
+				//Deleting
+				userOpe.deleteUser(userIs);
+				
+				System.out.println("===== After Delete =====");
+				userOpe.getUserCount();
+				userOpe.printUsers();
+				
+			} else {
+				System.out.println("User Not Found");
+			}
+			*/
+			
 	}
 	
 
